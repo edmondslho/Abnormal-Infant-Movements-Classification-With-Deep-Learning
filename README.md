@@ -1,7 +1,7 @@
 # SMARTBabies - Sensing Movement using Action Recognition Technology in Babies
 The pursuit of early diagnosis of cerebral palsy has been an active research area with some very promising results using tools such as the General Movements Assessment (GMA). In this project, we explore the feasibility of extracting pose-based features from video sequences to automatically classify infant body movement into two categories, normal and abnormal. The classification was based upon the GMA, which was carried out on the video data by an independent expert reviewer. We explore the viability of using these pose-based feature sets for automated classification within a wide range of machine learning frameworks by carrying out extensive experiments.
 
-![GitHub Logo](/images/AR_example.jpg)
+![baby_pose](/images/baby_pose.png)
 
 
 # Requirements
@@ -31,7 +31,6 @@ Please cite these papers in your publications if it helps your research:
       title={Abnormal Infant Movements Classification With Deep Learning on Pose-Based Features}, 
       year={2020},
       volume={8},
-      number={},
       pages={51582-51592},
       doi={10.1109/ACCESS.2020.2980269}
     }
@@ -41,8 +40,6 @@ Please cite these papers in your publications if it helps your research:
        booktitle={2019 41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
        title={Establishing Pose Based Features Using Histograms for the Detection of Abnormal Infant Movements},
        year={2019},
-       volume={},
-       number={},
        pages={5469-5472},
        doi={10.1109/EMBC.2019.8857680}
     }

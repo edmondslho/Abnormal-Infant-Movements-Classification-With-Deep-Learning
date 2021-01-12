@@ -1,8 +1,4 @@
-# NETIVAR: NETwork Information Visualization based on Augmented Reality
-
-SMARTBabies - Sensing Movement using Action Recognition Technology in Babies
-
-# Introduction
+# SMARTBabies - Sensing Movement using Action Recognition Technology in Babies
 The pursuit of early diagnosis of cerebral palsy has been an active research area with some very promising results using tools such as the General Movements Assessment (GMA). In this project, we explore the feasibility of extracting pose-based features from video sequences to automatically classify infant body movement into two categories, normal and abnormal. The classification was based upon the GMA, which was carried out on the video data by an independent expert reviewer. We explore the viability of using these pose-based feature sets for automated classification within a wide range of machine learning frameworks by carrying out extensive experiments.
 
 ![GitHub Logo](/images/AR_example.jpg)

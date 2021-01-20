@@ -43,7 +43,7 @@ Please cite these papers in your publications if it helps your research:
          
 
 # Authors and Contributors
-SMARTBabies is developed by Kevin McCay (kevin.d.mccay@northumbria.ac.uk) and the proejct is supervised by Edmond Ho (edmond@edho.net). Currently, it is being maintained by Edmond Ho.
+SMARTBabies is developed by Kevin McCay (kevin.d.mccay@northumbria.ac.uk) and Edmond Ho (edmond@edho.net). Currently, it is being maintained by Edmond Ho.
 
 # License
 SMARTBabies is freely available for free non-commercial use, and may be redistributed under these conditions. Please, see the license for further details. Interested in a commercial license? Contact Edmond Ho (edmond@edho.net).

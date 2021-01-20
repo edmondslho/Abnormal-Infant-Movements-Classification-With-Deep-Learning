@@ -58,8 +58,8 @@ modelStr = 'FCNet'      # other models are available, such as Conv1DNet-1, Conv1
 # addiional settings
 batch_size = 3
 dropoutRate = 0.1
-epochs = 50
-print_every = 25
+epochs = 4000
+print_every = 100
 learningRate = 0.0005
 
 # Note: Due to the random initialization of our newly proposed deep learning

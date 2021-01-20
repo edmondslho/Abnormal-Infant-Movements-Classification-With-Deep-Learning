@@ -7,20 +7,17 @@ The pursuit of early diagnosis of cerebral palsy has been an active research are
 # Requirements
 In order to run this application, you must have:
 
-* A Cisco 2960 24 port switch running on the same network as the device, with an address matching the one in the object in Unity (Default is 192.168.0.1) Running Telnet
-* All ports must be configured as if it were a fully used switch. (Descriptions etc)
-* An android smart-phone running 7.0 Nougat, with a camera and decent CPU and Unity 2017.4.0f1
-* A printed off version of the user-defined target
+* pytorch
+* pandas
+* numpy
 
 # Getting started
 
-*If using the smartphone*
+The example program with detailed instructions can be found in main.py
 
-Launch the application and login with the appropriate username and password, tap login. A notice will appear warning of the dangers of telnet, click continue and move the camera away from the target Move the camera back to the target to display the port information Use the arrow buttons in the top right corner to move between port options, the name of the option will be displayed at the bottom of the application
+All of the 5 models, namely FCNet, Conv1D-1, Conv1D-2, Conv2D-1, and Conv2D-2 are included in model.py
 
-*If using Unity player (must have a webcam, may need to change Vuforia settings in Unity to setup)*
-
-Make sure the computer is connected to the right switch/ switch is running SSH Press the play button in unity Hold the target in the webcam's view Port information will be displayed Use the arrow buttons in the top right corner to move between port options, the name of the option will be displayed at the bottom of the application
+Samples of the HOJO2D and HOJD2D features can be foudn under data/
 
 # Citation
 Please cite these papers in your publications if it helps your research:

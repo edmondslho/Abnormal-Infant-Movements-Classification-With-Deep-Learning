@@ -8,7 +8,7 @@ import torch.utils.data as data
 
 from model import FCNet, Conv1DNet, Conv2DNet
 
-# Check if GPU is available
+# Check if GPU is available 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 ###############################################################################

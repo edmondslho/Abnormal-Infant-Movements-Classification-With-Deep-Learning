@@ -17,7 +17,7 @@ The example program with detailed instructions can be found in main.py
 
 All of the 5 models, namely FCNet, Conv1D-1, Conv1D-2, Conv2D-1, and Conv2D-2 are included in model.py
 
-Samples of the HOJO2D and HOJD2D features can be foudn under data/
+Samples of the HOJO2D and HOJD2D features can be found under data/
 
 # Citation
 Please cite these papers in your publications if it helps your research:

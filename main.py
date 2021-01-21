@@ -58,8 +58,8 @@ modelStr = 'FCNet'      # other models are available, such as Conv1DNet-1, Conv1
 # addiional settings
 batch_size = 3
 dropoutRate = 0.1
-epochs = 4000
-print_every = 100
+epochs = 400
+print_every = 50
 learningRate = 0.0005
 
 # Note: Due to the random initialization of our newly proposed deep learning
@@ -160,8 +160,12 @@ for a in range(ttlVid):
     loss_list = []
     iteration_list = []
     accuracy_list = []
+
+    # keep track of the best training loss
+    best_training_loss = 100000
     for e in range(epochs):
         running_loss = 0
+        steps = 0
         for images, labels in iter(train_loader):
             steps += 1
 
@@ -178,32 +182,32 @@ for a in range(ttlVid):
 
             running_loss += loss.item()
 
-        if e % print_every == 0:
-            # Make sure network is in eval mode for inference
-            model.eval()
+        # Make sure network is in eval mode for inference
+        model.eval()
 
-            # Turn off gradients for validation, saves memory and computations
-            with torch.no_grad():
-                test_loss, accuracy = validation(model, test_loader, criterion)
+        # Turn off gradients for validation, saves memory and computations
+        with torch.no_grad():
+            test_loss, accuracy = validation(model, test_loader, criterion)
 
+            if e % print_every == 0:
                 print("Epoch: {}/{}.. ".format(e+1, epochs),
-                      "Training Loss: {:.3f}.. ".format(running_loss/print_every),
+                      "Training Loss: {:.3f}.. ".format(running_loss/steps),
                       "Test Loss: {:.3f}.. ".format(test_loss/len(test_loader)),
                       "Test Accuracy: {:.3f} (#{})".format(accuracy/len(test_loader), len(test_loader)))
 
-                # store the best performance
-                acc = accuracy / len(test_loader)
-                if acc > allAccuracy[a]:
-                    allAccuracy[a] = acc
+            # store the testing accuracy if the training loss has improved
+            if running_loss / steps < best_training_loss:
+                best_training_loss = running_loss / steps
+                allAccuracy[a] = accuracy / len(test_loader)
 
-                # store loss and iteration
-                loss_list.append(loss.data)
-                iteration_list.append(steps)
-                accuracy_list.append(accuracy/len(test_loader))
-                running_loss = 0
+            # store loss and iteration
+            loss_list.append(loss.data)
+            iteration_list.append(steps)
+            accuracy_list.append(accuracy/len(test_loader))
+            running_loss = 0
 
-                # Make sure training is back on
-                model.train()
+        # Make sure training is back on
+        model.train()
 
 print(allAccuracy)
 print("Avg: {:.3f}".format(np.average(allAccuracy)))
